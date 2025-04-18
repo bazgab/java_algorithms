@@ -35,7 +35,13 @@ public class LexographicallySmallestString {
         }
         // Finally we print the output after the loop.
         System.out.println(charArray);
+
+
+
     }
+
+
+
 
 }
 
