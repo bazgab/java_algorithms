@@ -27,15 +27,15 @@ public class ProcessBuilderImplementation {
 
     public static void main(String[] args) throws IOException {
         ProcessBuilder pb = new ProcessBuilder("ls");
-
-
-        String dir = pb.directory(new File("/etc/")).toString();
-
-
         pb.redirectErrorStream(true);
         pb.redirectOutput(ProcessBuilder.Redirect.PIPE);
         Process p = pb.start();
+        String[] fileListArray = listFilesUsingDirectoryStream("/etc/maven").toArray(new String[0]);
+
         System.out.println(listFilesUsingDirectoryStream("/etc/maven"));
+        for (String file : fileListArray) {
+            System.out.println(file);
+        }
         System.out.println();
 
 
