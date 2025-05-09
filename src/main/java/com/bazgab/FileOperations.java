@@ -1,10 +1,9 @@
 package com.bazgab;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
+
 import java.nio.file.NoSuchFileException;
-import java.util.Scanner;
+
 
 public class FileOperations {
 
